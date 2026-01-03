@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
   res.write("hello\n");            // ➎
   // prettier-ignore
   setTimeout(() => {             // ➏
-    res.end("Node.js");
+  res.end("Node.js");
   }, 2000);
 });
 

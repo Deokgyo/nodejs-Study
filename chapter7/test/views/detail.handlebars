@@ -1,0 +1,67 @@
+<style>
+    .detail-container {
+        display:flex;
+        flex-direction: column;
+    }
+    .btn-area {
+        display:flex;
+        flex-direction: row;
+    }
+    .comment-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .comment {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+<div class="detail-container">
+    <h1>[{{title}}] 제목</h1>
+
+    <section class="post-info">
+        <div class="writer-area">
+            작성자: <span class="writer">아무개</span>
+        </div>
+        <div class="btn-area">
+            조회수 : <span> 999 </span>
+            |
+            작성일시 : <span>2022-10-10 00:00:00</span>
+            <button class="modify btn" onclick="modifyPost()">수정</button>
+            <button class="delete btn" onclick="deletePost()">삭제</button>
+        </div>
+        <div class="content-area">
+            <pre class="post-content">본문</pre>
+        </div>
+    </section>
+
+    <section class="comment-write-area">
+        <form method="post" action="/write-comment">
+            <div class="comment-info">
+                <div class="name&passwd">
+                    <input type="text" class="name" name="name" placeholder="이름">
+                    <input type="password" class="passwd" name="passwd" placeholder="비밀번호">
+                </div>
+                <textarea name="commentContent" placeholder="댓글을 남겨주세요"></textarea>
+                <button class="comment write btn">작성</button>
+            </div>
+        </form>
+    </section>
+
+    <hr>
+    
+    <section class="comment-view-area">
+            <div class="comment">
+                <span class="name">작성자: 아무개19</span>
+                <span class="comment-date">작성일시: 2022.2.4</span>
+                <button class="delete btn">삭제</button>
+                <pre>{{comment}}</pre>
+            </div>
+    </section>
+
+    <div class="toList">
+        <button class="toList" onclick="location.href='/'">목록으로</button>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const searchBtn = document.getElementById("search");
+    searchBtn.addEventListener("click", function() {
+        const val = document.getElementById("searchVal").value;
+        console.log(val + " 이거다")
+        location.href = `/?search=${val}`;
+    });
+});
+</script>
+<div class="container"> 
+    <h1>{{ title }}</h1>
+    {{!-- 게시판 제목 동적으로 구현 --}}
+    <section class="search-area">
+        <input type="text" id="searchVal" size="50" value="{{search}}" placeholder="검색어를 입력하세요">
+        <button id="search" class="btn">검색</button>
+        <br>
+        <button id="write" class="btn"><a href="/write" style="text-decoration: none;" id="a">글쓰기</a></button>
+    </section>
+    <section class="table-area">
+        <table>
+            <tr>
+                <th width="50%">제목</th>
+                <th>작성자</th>
+                <th>조회수</th>
+                <th>등록일</th>
+            </tr>
+            <tr>
+                <td><a href="/detail/"></a>제목1</td>
+                <td align="center">작성자1</td>
+                <td align="center">12</td>
+                <td align="center">222.22.2</td>
+            </tr>
+        </table>
+    </section>
+    {{!-- 테이블 내용 동적으로 구현 --}}
+    <section class="paganation">
+        <a>&lt;&lt;</a>
+        <a>&lt;</a>
+        <a>1</a>
+        <a>2</a>
+        <a>3</a>
+        <a>4</a>
+        <a>&gt;</a>
+        <a>&gt;&gt;</a>
+    </section>
+</div>
+

@@ -1,0 +1,13 @@
+{
+  "name": "sc-test",
+  "version": "1.0.0",
+  "scripts": {
+    "prehello": "echo 'prehello'",
+    "hello": "echo 'hello Node.js'",
+    "posthello": "echo 'posthello'",
+    "test": "echo 'hello Node.js'",
+    "stop": "echo 'hello Node.js'",
+    "start": "echo 'hello Node.js'",
+    "restart": "echo 'hello Node.js'"
+  }
+}
