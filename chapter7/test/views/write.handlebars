@@ -7,17 +7,22 @@
         display: flex;
         flex-direction: column;
     }
+    .write-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 </style>
 
 <div class="write-container">
-    <h1>[{{title}}] 글 작성</h1>
+    <h1>[{{title}}] 글 작성화면</h1>
     <form method="post" action="/write" name="boardForm"> 
         <section class="input-area">
             <label>
                 제목
                 <input type="text" name="subject" placeholder="제목을 넣어주세요">
             </label>
-            <label>이름
+            <label>
+                이름
                 <input type="text" name="name"placeholder="이름">
             </label>
             <label>비밀번호

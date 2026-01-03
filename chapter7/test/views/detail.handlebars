@@ -16,21 +16,37 @@
         display: flex;
         flex-direction: column;
     }
+    .detail-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .writer {
+        font-weight: bold;
+    }
+    .content-area {
+        margin-top: 20px;
+        border : 1px solid #ccc;
+        padding: 10px;
+    }
+    .comment-write-area {
+        margin-top: 30px;
+    }
 </style>
 
 <div class="detail-container">
-    <h1>[{{title}}] 제목</h1>
+    <h1>[{{title}}]</h1>
 
     <section class="post-info">
+        <h2> 게시글 제목 입니다.</h2>
         <div class="writer-area">
             작성자: <span class="writer">아무개</span>
+            <button class="modify btn" onclick="modifyPost()">수정</button>
+            <button class="delete btn" onclick="deletePost()">삭제</button>
         </div>
         <div class="btn-area">
             조회수 : <span> 999 </span>
             |
             작성일시 : <span>2022-10-10 00:00:00</span>
-            <button class="modify btn" onclick="modifyPost()">수정</button>
-            <button class="delete btn" onclick="deletePost()">삭제</button>
         </div>
         <div class="content-area">
             <pre class="post-content">본문</pre>
@@ -38,9 +54,11 @@
     </section>
 
     <section class="comment-write-area">
+        <span>3 개의 댓글이 있습니다.</span> 
+        <br>
         <form method="post" action="/write-comment">
             <div class="comment-info">
-                <div class="name&passwd">
+                <div class="nameAndPasswd">
                     <input type="text" class="name" name="name" placeholder="이름">
                     <input type="password" class="passwd" name="passwd" placeholder="비밀번호">
                 </div>

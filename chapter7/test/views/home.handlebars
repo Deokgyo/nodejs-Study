@@ -13,12 +13,14 @@
     {{!-- 게시판 제목 동적으로 구현 --}}
     <section class="search-area">
         <input type="text" id="searchVal" size="50" value="{{search}}" placeholder="검색어를 입력하세요">
-        <button id="search" class="btn">검색</button>
-        <br>
+        <button id="search" class="btn" onclick="location.href=`/?search=${document.getElementById('searchVal').value}`">검색</button>
+        <br/>
         <button id="write" class="btn"><a href="/write" style="text-decoration: none;" id="a">글쓰기</a></button>
+        <br>
     </section>
+    <br>
     <section class="table-area">
-        <table>
+        <table border="1">
             <tr>
                 <th width="50%">제목</th>
                 <th>작성자</th>
